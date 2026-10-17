@@ -1,0 +1,120 @@
+/* =========================================================
+   shared.css — Navbar + Footer untuk SEMUA halaman
+   Home, About (sts2), Shop (sts3), Location (sts4)
+   Taruh di folder utama (sejajar index.html Home).
+   ========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+
+:root {
+  --page-pad: clamp(1rem, 5vw, 5rem);
+  --logo-shift: -25%; /* atur posisi naik/turun logo di sini */
+}
+
+/* ---------- Navbar ---------- */
+.navbar img {
+  display: block;
+  width: clamp(90px, 11vw, 180px) !important; /* menimpa inline style */
+  height: auto;
+  transform: translateY(var(--logo-shift));
+}
+.navbar-nav {
+  padding-right: 0;
+  margin-left: clamp(0rem, 3vw, 3rem);
+  gap: clamp(0.25rem, 1vw, 1rem);
+  text-align: center;
+}
+.nav-item a {
+  font-size: clamp(1.15rem, 1.9vw, 2rem);
+  color: #916969;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  background-color: #470505;
+  padding: clamp(2rem, 5vw, 5rem) var(--page-pad);
+}
+.footer .container {
+  display: block; /* menimpa .container flex milik halaman lain */
+  max-width: 2000px;
+  margin: auto;
+  padding: 0;
+}
+.footer .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+}
+.footer-col {
+  width: 25%;
+  padding: clamp(0.75rem, 2vw, 2.5rem);
+}
+.footer-col h4 {
+  font-size: clamp(1.25rem, 2vw, 2.25rem);
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  position: relative;
+}
+.footer-col h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: white;
+  height: 2px;
+  width: 50px;
+}
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.footer-col ul li a {
+  transform: none;
+  font-size: clamp(1rem, 1.5vw, 1.6rem);
+  text-transform: capitalize;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+.footer-col ul li a:hover {
+  color: #ffffff;
+  padding-left: 8px;
+}
+.footer-col .social-links a {
+  display: inline-block;
+  height: clamp(40px, 2.6vw, 56px);
+  width: clamp(40px, 2.6vw, 56px);
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: clamp(40px, 2.6vw, 56px);
+  font-size: clamp(1rem, 1.3vw, 1.4rem);
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover {
+  background-color: #ffffff;
+  color: #470505;
+}
+
+@media (max-width: 991px) {
+  .footer-col {
+    width: 50%;
+  }
+}
+@media (max-width: 574px) {
+  .footer-col {
+    width: 100%;
+  }
+}

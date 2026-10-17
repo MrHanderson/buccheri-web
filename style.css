@@ -1,0 +1,245 @@
+@font-face {
+  font-family: w;
+  src: url("font/Louis George Cafe.ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: lora;
+  src: url("font/Lora-Medium.ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: Minions;
+  src: url("font/Minion Condensed.otf");
+  font-display: swap;
+}
+@font-face {
+  font-family: Geosans;
+  src: url("font/GeosansLight.ttf");
+  font-display: swap;
+}
+
+/* ---------- Base ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+}
+body {
+  background-color: white;
+  overflow-x: hidden; /* cegah scroll horizontal */
+}
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+ul {
+  list-style: none;
+}
+
+/* Ukuran fluid: min, ideal (vw), max */
+:root {
+  --section-space: clamp(3rem, 8vw, 8rem);
+  --gap: clamp(1rem, 3vw, 3rem);
+  --page-pad: clamp(1rem, 5vw, 5rem);
+}
+
+/* ---------- Navbar ---------- */
+.container-fluid img {
+  display: block;
+  width: clamp(300px, 11vw, 180px) !important; /* menimpa inline style 11% */
+  height: auto;
+  transform: translateY(-15%);
+}
+.navbar-nav {
+  padding-right: 0;
+  margin-left: clamp(0rem, 3vw, 3rem);
+  gap: clamp(0.25rem, 1vw, 1rem);
+}
+.nav-item a {
+  font-size: clamp(1.15rem, 1.9vw, 2rem);
+  color: #916969;
+}
+
+/* ---------- Tagline ---------- */
+.shop h2 {
+  font-family: w;
+  font-size: clamp(1.25rem, 2.6vw, 2.5rem);
+  font-weight: 600;
+  color: #761616;
+  text-align: center;
+  line-height: 1.3;
+  max-width: 60ch;
+  margin: 0 auto;
+  padding: var(--section-space) var(--page-pad) 0;
+}
+
+/* ---------- Kategori (Men / Women / Sneakers) ---------- */
+.shoes-image .row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap);
+  margin: 0;
+  padding: var(--section-space) var(--page-pad) 0;
+}
+.column {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  max-width: none;
+}
+.column h4 {
+  font-family: Minions;
+  font-size: clamp(1.25rem, 2.2vw, 2.25rem);
+  text-align: center;
+  padding-top: 1rem;
+}
+.column p {
+  font-family: Geosans;
+  font-size: clamp(0.95rem, 1.5vw, 1.5rem);
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* ---------- New Arrival ---------- */
+.new-arrival h2 {
+  font-family: lora;
+  text-align: center;
+  font-size: clamp(2rem, 5vw, 4rem);
+  padding-top: var(--section-space);
+}
+.arrival-section .row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--gap);
+  margin: 0;
+  padding: clamp(1.5rem, 4vw, 4rem) var(--page-pad) 0;
+}
+.shoes {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  max-width: none;
+}
+.shoes h4 {
+  font-family: w;
+  font-size: clamp(1.1rem, 1.8vw, 1.75rem);
+  padding-top: 0.75rem;
+}
+.shoes p {
+  font-size: clamp(1rem, 1.4vw, 1.25rem);
+}
+
+/* ---------- Video ---------- */
+.hero {
+  margin-top: var(--section-space) !important;
+}
+.container-vid {
+  width: 100%;
+  height: auto;
+  padding-top: 0;
+  margin-bottom: var(--section-space);
+  overflow: hidden;
+}
+.container-vid > video {
+  display: block;
+  width: 100%;
+  height: min(70vh, 48vw);
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+/* ---------- Footer ---------- */
+.container {
+  max-width: 2000px;
+  margin: auto;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer {
+  background-color: #470505;
+  padding: clamp(2rem, 5vw, 5rem) var(--page-pad);
+}
+.footer-col {
+  width: 25%;
+  padding: clamp(0.75rem, 2vw, 2.5rem);
+}
+.footer-col h4 {
+  font-size: clamp(1.25rem, 2vw, 2.25rem);
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  position: relative;
+}
+.footer-col h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: white;
+  height: 2px;
+  width: 50px;
+}
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.footer-col ul li a {
+  font-size: clamp(1rem, 1.5vw, 1.6rem);
+  text-transform: capitalize;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+.footer-col ul li a:hover {
+  color: #ffffff;
+  padding-left: 8px;
+}
+.footer-col .social-links a {
+  display: inline-block;
+  height: clamp(40px, 2.6vw, 56px);
+  width: clamp(40px, 2.6vw, 56px);
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: clamp(40px, 2.6vw, 56px);
+  font-size: clamp(1rem, 1.3vw, 1.4rem);
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover {
+  background-color: #ffffff;
+  color: #470505;
+}
+
+/* ---------- Breakpoints ---------- */
+@media (max-width: 991px) {
+  .arrival-section .row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer-col {
+    width: 50%;
+  }
+}
+@media (max-width: 767px) {
+  .shoes-image .row {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 574px) {
+  .arrival-section .row {
+    gap: 1rem;
+  }
+  .footer-col {
+    width: 100%;
+  }
+}

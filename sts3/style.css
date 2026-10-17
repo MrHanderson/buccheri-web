@@ -1,0 +1,56 @@
+@font-face {
+  font-family: Geosans;
+  src: url(font/GeosansLight.ttf);
+}
+@font-face {
+  font-family: Lora;
+  src: url(font/Lora-Medium.ttf);
+}
+@font-face {
+  font-family: louis;
+  src: url(font/louis-george-cafe.ttf);
+}
+
+.image img {
+  width: 100%;
+}
+
+.collection h1 {
+  font-family: geosans;
+  letter-spacing: 0.5rem;
+  font-weight: 600;
+  text-align: center;
+  padding-top: 8rem;
+}
+
+.form-floating {
+  margin-left: 2rem;
+  width: 25%;
+}
+
+.form-floating option {
+  font-size: 30px;
+}
+
+.shoes {
+  text-align: center;
+  margin-left: 8rem;
+  width: 20%;
+  padding: 3rem;
+}
+
+.shoes h4 {
+  padding-top: 2rem;
+  font-family: w;
+  font-size: 40px;
+}
+
+.shoes p {
+  font-family: geosans;
+  font-size: 30px;
+}
+
+.container {
+  max-width: 2000px;
+  margin: auto;
+}

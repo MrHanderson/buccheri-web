@@ -1,0 +1,43 @@
+@font-face {
+  font-family: lora;
+  src: url(font/Lora-Medium.ttf);
+}
+
+h1 {
+  font-family: lora;
+  font-size: 70px;
+  color: #701313;
+  text-align: center;
+  padding: 15rem;
+}
+
+.image img {
+  width: 100%;
+  margin-top: -12rem;
+}
+
+.button a {
+  font-size: 30px;
+}
+
+.button {
+  text-align: center;
+  padding: 5rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  max-width: 2000px;
+  margin: auto;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+ul {
+  list-style: none;
+}

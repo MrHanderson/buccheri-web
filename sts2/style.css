@@ -1,0 +1,91 @@
+@font-face {
+  font-family: Geosans;
+  src: url(font/GeosansLight.ttf);
+}
+@font-face {
+  font-family: Lora;
+  src: url(font/Lora-Medium.ttf);
+}
+@font-face {
+  font-family: louis;
+  src: url(font/Louis\ George\ Cafe.ttf);
+}
+
+body {
+  justify-content: center;
+  align-items: center;
+}
+
+.container-img img {
+  position: relative;
+  top: 150px;
+  left: 450px;
+  width: 30%;
+}
+
+.brand h2 {
+  position: relative;
+  transform: translateX(60%);
+  font-family: lora;
+  font-size: 80px;
+}
+
+.line img {
+  justify-content: center;
+  display: flex;
+  margin: auto;
+  width: 5px;
+  transform: translateY(-60%);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-section,
+.right-section {
+  padding: 2rem;
+  width: 100%;
+}
+.left-section img,
+.right-section img {
+  width: 100%;
+}
+.left-section h2,
+.right-section h2 {
+  font-size: 60px;
+  font-family: lora;
+  text-align: center;
+  padding: 1rem;
+}
+.left-section p,
+.right-section p {
+  font-family: louis;
+  font-size: 25px;
+  text-align: center;
+}
+
+.right-section p {
+  font-family: louis;
+  font-size: 20px;
+  text-align: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  max-width: 2000px;
+  margin: auto;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+ul {
+  list-style: none;
+}
