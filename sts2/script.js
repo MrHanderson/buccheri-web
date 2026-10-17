@@ -4,10 +4,6 @@ ScrollReveal({
   delay: 200,
 });
 
-ScrollReveal().reveal(".", {
-  origin: "top",
-});
-
 ScrollReveal().reveal(".shoes-image", {
   origin: "bottom",
 });
