@@ -1,91 +1,113 @@
+/* ---------- Fonts ---------- */
 @font-face {
   font-family: Geosans;
-  src: url(font/GeosansLight.ttf);
+  src: url(../font/GeosansLight.ttf);
+  font-display: swap;
 }
 @font-face {
   font-family: Lora;
-  src: url(font/Lora-Medium.ttf);
+  src: url(../font/Lora-Medium.ttf);
+  font-display: swap;
 }
 @font-face {
   font-family: louis;
-  src: url(font/Louis\ George\ Cafe.ttf);
+  src: url(../font/louis-george-cafe.ttf);
+  font-display: swap;
 }
-
+ 
+/* ---------- Ukuran fluid ---------- */
+:root {
+  --section-space: clamp(3rem, 8vw, 8rem);
+  --gap: clamp(1rem, 4vw, 4rem);
+  --page-pad: clamp(1rem, 5vw, 5rem);
+}
 body {
-  justify-content: center;
-  align-items: center;
+  overflow-x: hidden;
 }
-
-.container-img img {
-  position: relative;
-  top: 150px;
-  left: 450px;
-  width: 30%;
+img {
+  max-width: 100%;
+  height: auto;
 }
-
-.brand h2 {
-  position: relative;
-  transform: translateX(60%);
-  font-family: lora;
-  font-size: 80px;
-}
-
-.line img {
-  justify-content: center;
+ 
+/* ---------- Logo | garis | OUR BRAND ---------- */
+.brand-row {
   display: flex;
-  margin: auto;
-  width: 5px;
-  transform: translateY(-60%);
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap);
+  padding: var(--section-space) var(--page-pad);
 }
-
+.logo-image,
+.brand-text {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.logo-image img {
+  width: min(100%, 460px);
+}
+.line img {
+  display: block;
+  width: 4px;
+  height: clamp(120px, 14vw, 220px);
+}
+.brand-text h2 {
+  font-family: Lora;
+  font-size: clamp(1.75rem, 4.5vw, 4.5rem);
+  text-align: center;
+}
+ 
+/* ---------- Section teks + gambar ---------- */
+.image-one,
+.image-two,
+.image-three {
+  padding: clamp(1.5rem, 4vw, 4rem) 0;
+}
 .container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  gap: var(--gap);
+  max-width: 1400px;
+  margin: auto;
+  padding: 0 var(--page-pad);
 }
-
 .left-section,
 .right-section {
-  padding: 2rem;
-  width: 100%;
+  flex: 1;
+  padding: 0;
+  width: auto;
 }
 .left-section img,
 .right-section img {
   width: 100%;
+  display: block;
 }
 .left-section h2,
 .right-section h2 {
-  font-size: 60px;
-  font-family: lora;
+  font-family: Lora;
+  font-size: clamp(1.75rem, 3.2vw, 3.5rem);
   text-align: center;
-  padding: 1rem;
+  padding: 0 0 1rem;
 }
 .left-section p,
 .right-section p {
   font-family: louis;
-  font-size: 25px;
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  line-height: 1.6;
   text-align: center;
 }
-
-.right-section p {
-  font-family: louis;
-  font-size: 20px;
-  text-align: center;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-.container {
-  max-width: 2000px;
-  margin: auto;
-}
-.row {
-  display: flex;
-  flex-wrap: wrap;
-}
-ul {
-  list-style: none;
+ 
+/* ---------- HP / tablet ---------- */
+@media (max-width: 767px) {
+  .brand-row {
+    flex-direction: column;
+  }
+  .line img {
+    width: 80px;
+    height: 3px;
+  }
+  .container {
+    flex-direction: column;
+  }
 }
