@@ -118,3 +118,39 @@ ul {
     width: 100%;
   }
 }
+
+/* =========================================================
+   Pengaman tampilan HP / tablet (berlaku di semua halaman)
+   ========================================================= */
+html {
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  overflow-x: hidden; /* cegah halaman melebar melebihi layar */
+}
+img,
+video,
+iframe,
+svg {
+  max-width: 100%;
+}
+img,
+video {
+  height: auto;
+}
+iframe {
+  border: 0;
+}
+
+@media (max-width: 991px) {
+  .navbar-nav {
+    margin-left: 0;
+    padding: 0.5rem 0;
+  }
+  .navbar-nav .nav-link {
+    padding: 0.6rem 0; /* area tap lebih besar */
+  }
+  .nav-item a {
+    font-size: 1.15rem;
+  }
+}
