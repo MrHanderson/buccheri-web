@@ -51,7 +51,7 @@ ul {
 /* ---------- Navbar ---------- */
 .container-fluid img {
   display: block;
-  width: clamp(30px, 11vw, 180px) !important; /* menimpa inline style 11% */
+  width: clamp(300px, 11vw, 180px) !important; /* menimpa inline style 11% */
   height: auto;
   transform: translateY(-15%);
 }
