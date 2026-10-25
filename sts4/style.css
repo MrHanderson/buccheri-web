@@ -1,43 +1,45 @@
 @font-face {
   font-family: lora;
   src: url(font/Lora-Medium.ttf);
+  font-display: swap;
 }
-
-h1 {
+ 
+/* ---------- Ukuran fluid ---------- */
+:root {
+  --section-space: clamp(3rem, 9vw, 9rem);
+  --page-pad: clamp(1rem, 5vw, 5rem);
+}
+ 
+/* ---------- Judul ---------- */
+.location h1 {
   font-family: lora;
-  font-size: 70px;
+  font-size: clamp(2.25rem, 6vw, 5rem);
   color: #701313;
   text-align: center;
-  padding: 15rem;
+  padding: var(--section-space) var(--page-pad) clamp(1.5rem, 4vw, 3rem);
 }
-
+ 
+/* ---------- Gambar peta ---------- */
 .image img {
+  display: block;
   width: 100%;
-  margin-top: -12rem;
+  height: auto;
+  min-height: 220px; /* di HP gambar tetap cukup tinggi, sisi kiri-kanan dipotong */
+  object-fit: cover;
+  margin: 0;
 }
-
-.button a {
-  font-size: 30px;
-}
-
+ 
+/* ---------- Tombol ---------- */
 .button {
   text-align: center;
-  padding: 5rem;
+  padding: clamp(2rem, 5vw, 5rem) var(--page-pad);
 }
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.button a {
+  font-size: clamp(1rem, 1.6vw, 1.5rem);
+  padding: 0.75rem clamp(1.25rem, 3vw, 2.5rem);
 }
+ 
 .container {
   max-width: 2000px;
   margin: auto;
-}
-.row {
-  display: flex;
-  flex-wrap: wrap;
-}
-ul {
-  list-style: none;
 }
