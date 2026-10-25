@@ -48,23 +48,6 @@ ul {
   --page-pad: clamp(1rem, 5vw, 5rem);
 }
 
-/* ---------- Navbar ---------- */
-.container-fluid img {
-  display: block;
-  width: clamp(300px, 11vw, 180px) !important; /* menimpa inline style 11% */
-  height: auto;
-  transform: translateY(-15%);
-}
-.navbar-nav {
-  padding-right: 0;
-  margin-left: clamp(0rem, 3vw, 3rem);
-  gap: clamp(0.25rem, 1vw, 1rem);
-}
-.nav-item a {
-  font-size: clamp(1.15rem, 1.9vw, 2rem);
-  color: #916969;
-}
-
 /* ---------- Tagline ---------- */
 .shop h2 {
   font-family: w;
