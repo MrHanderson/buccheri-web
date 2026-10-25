@@ -34,17 +34,17 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: var(--gap);
+  gap: clamp(1.5rem, 4vw, 4rem);
   padding: var(--section-space) var(--page-pad);
 }
 .logo-image,
 .brand-text {
-  flex: 1;
+  flex: 0 1 auto;
   display: flex;
   justify-content: center;
 }
 .logo-image img {
-  width: min(100%, 460px);
+  width: clamp(180px, 22vw, 400px);
 }
 .line img {
   display: block;
